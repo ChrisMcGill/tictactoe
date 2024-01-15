@@ -4,5 +4,48 @@ style board
 */
 
 body{
-    background-color: bisque;
+    margin: 0;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* add hover effect to show preview*/
+
+.board :first-child,
+.board :nth-child(2),
+.board :nth-child(3){
+    border-top-style: none;
+}
+
+.board :first-child,
+.board :nth-child(4),
+.board :nth-child(7){
+    border-left-style: none;
+}
+
+.board :last-child,
+.board :nth-child(6),
+.board :nth-child(3){
+    border-right-style: none;
+}
+
+.board :last-child,
+.board :nth-child(7),
+.board :nth-child(8){
+    border-bottom-style: none;
 }
